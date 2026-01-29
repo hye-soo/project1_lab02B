@@ -1,0 +1,477 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* HEADER AREA */
+
+.site-header {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center; /* Center .header-inner */
+}
+
+/* INNER WRAPPER */
+
+.header-inner {
+  display: grid;
+  grid-template-columns: auto 1fr; /* logo and nav */
+  align-items: center;
+  max-width: 1024px; /* Match banner */
+  width: 100%;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60%;
+}
+
+/* NAV */
+.site-nav {
+  width: 100%;
+}
+
+.nav-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 equal sections */
+  width: 100%;
+  list-style: none;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* COLORS */
+.nav-item:nth-child(1) .nav-link {
+  background: #009578;
+}
+.nav-item:nth-child(2) .nav-link {
+  background: #f5b400;
+}
+.nav-item:nth-child(3) .nav-link {
+  background: #d7263d;
+}
+.nav-item:nth-child(4) .nav-link {
+  background: #009fdf;
+}
+.nav-item:nth-child(5) .nav-link {
+  background: #004e7c;
+}
+
+.nav-link:hover {
+  opacity: 0.85;
+}
+
+/* ============================= */
+/* ======= BANNER SECTION ====== */
+/* ============================= */
+
+.banner {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 0; /* or padding: 10px 0; if you want a little space */
+}
+
+.banner-inner {
+  position: relative;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.banner-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.banner-item {
+  background-color: white;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 0;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: max-content;
+}
+
+.banner-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+}
+
+.banner-item:nth-child(1)::before {
+  background-color: #005b9f;
+}
+.banner-item:nth-child(2)::before {
+  background-color: #f5b400;
+}
+.banner-item:nth-child(3)::before {
+  background-color: #d7263d;
+}
+
+/* ARROW Carousel */
+.banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: #333;
+  font-size: 28px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+
+.banner-arrow:hover {
+  background: #eee;
+}
+
+.banner-arrow-left {
+  left: -60px;
+}
+
+.banner-arrow-right {
+  right: -60px;
+}
+
+/* heading */
+/* Outer section (Red box) */
+.company-intro {
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9; /* optional */
+  padding: 40px 20px; /* some vertical spacing */
+}
+
+/* Inner wrapper (Blue box) */
+.intro-inner {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Text box (Yellow box) */
+.intro-text {
+  text-align: center;
+  max-width: 700px;
+}
+
+/* Optional styling */
+.intro-title {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.brand-name {
+  color: #009fdf;
+  font-weight: bold;
+}
+
+/* =============================== */
+/* == COMPANY INTRO SECTION ===== */
+/* =============================== */
+.company-intro {
+  background-color: #fff;
+  display: grid;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.intro-inner {
+  max-width: 1024px; /* Blue container */
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.intro-text {
+  text-align: center;
+  max-width: 800px; /* Yellow container */
+}
+
+.intro-title {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.brand-name {
+  color: #009fdf; /* Accent color for brand */
+}
+
+/* =============================== */
+/* == INTRO SERVICES SECTION ===== */
+/* =============================== */
+.intro-services {
+  padding: 60px 0;
+  background-color: #fff;
+  display: grid;
+  justify-content: center;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 1024px; /* Blue container */
+  width: 100%;
+}
+
+.services-section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.services-subtitle {
+  font-size: 14px;
+  color: #777;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1024px; /* Blue container */
+  width: 100%;
+}
+
+.service-card {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.service-icon {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 16px;
+}
+
+.service-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.service-subtitle {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* ===== RESPONSIVE RULES ===== */
+/* ============================= */
+@media screen and (max-width: 992px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-nav .nav-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 nav items per row on tablet */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .nav-list {
+    grid-template-columns: repeat(2, 1fr); /* Only 2 items per row */
+    row-gap: 4px;
+  }
+
+  .nav-item:nth-child(5) {
+    grid-column: span 2; /* Last item takes full row */
+  }
+
+  .nav-link {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  /* Fix nav bar layout: keep 5 items in a single row */
+  .site-nav .nav-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .nav-item {
+    flex: 1; /* Make each nav item share space equally */
+  }
+
+  .nav-link {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  /* Fix carousel arrows: keep inside banner, not clipped */
+  .banner-arrow-left {
+    left: 10px;
+  }
+
+  .banner-arrow-right {
+    right: 10px;
+  }
+
+  /* Optional: reduce font size of banner text */
+  .banner-item {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .site-nav .nav-list {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-link {
+    padding: 12px 10px;
+  }
+} */
+
+/* Small only: max-width ~ 639px (mobile) */
+@media screen and (max-width: 39.9375em) {
+  /* NAVIGATION */
+  .nav-list {
+    grid-template-columns: 1fr; /* Stack nav items vertically */
+  }
+
+  .nav-link {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .site-nav {
+    width: 100%;
+  }
+
+  /* BANNER */
+  .banner {
+    display: none;
+  }
+  .banner-list {
+    top: auto;
+    bottom: 20px; /* Move banner list lower */
+    left: 20px;
+  }
+
+  .banner-item {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .banner-arrow {
+    display: none; /* Hide carousel arrows on mobile */
+  }
+
+  /* COMPANY INTRO */
+  .intro-title {
+    font-size: 20px;
+  }
+
+  .intro-text {
+    padding: 0 20px;
+  }
+
+  /* SERVICES SECTION */
+  .services {
+    grid-template-columns: 1fr; /* Stack service cards */
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .service-card {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eee; /* optional */
+  }
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0; /* Remove top margin */
+  }
+  .service-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .service-text-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-subtitle {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+  }
+}
